@@ -46,15 +46,36 @@ li {
   background-color: white;
 }
 
+ul .user .bio {
+  visibility: hidden;
+}
+ul .user .location {
+  text-align: left;
+  color: darkslategray;
+}
+
+aside .user {
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
 .name {
   font-size: 18px;
   text-transform: uppercase;
   margin: 0;
 }
 
+aside .name {
+  font-size: 16px;
+}
 .bio {
   font-size: 14px;
   color: darkslategray;
+}
+
+aside .bio {
+  font-size: 12px;
+  margin: 6px 0;
 }
 
 .location {
@@ -62,6 +83,9 @@ li {
   font-weight: 600;
   text-align: end;
   margin: 0;
+}
+aside .location {
+  font-size: 10px;
 }
 
 /*
