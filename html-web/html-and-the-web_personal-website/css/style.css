@@ -1,6 +1,115 @@
 * {
-    box-sizing: border-box;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
-    background-color: bisque;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+}
+
+.header {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  position: fixed;
+  top: 0px;
+}
+
+.boo {
+  position: absolute;
+  left: 0;
+}
+
+nav {
+  text-align: right;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 20px;
+  font-size: 20px;
+  background-color: blueviolet;
+  padding: 20px;
+  border-radius: 40px;
+  display: inline-flex;
+}
+
+ul[role="list"] {
+  list-style-type: none;
+}
+
+.main-content {
+  width: 80%;
+  background-color: aquamarine;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+a[href^="https"] {
+  color: salmon;
+  padding: 8px;
+}
+
+a[href^="https"]::before {
+  content: "💻";
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+a:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+[type="button"] {
+}
+
+.button {
+  color: white;
+  appearance: none;
+  border: none;
+  background-color: salmon;
+  padding: 10px;
+  border-radius: 10px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+
+input:focus {
+  outline: 2px solid hotpink;
+  border: none;
+}
+
+P::first-letter {
+  font-size: 32px;
+}
+
+.main-section .text {
+  color: salmon;
+}
+
+article {
+  background-color: yellow;
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.main-section > article {
+  background-color: pink;
+}
+
+p::before {
+  content: "💬";
+  font-size: 20px;
+  background-color: green;
+  color: deeppink;
+  font-weight: bold;
 }

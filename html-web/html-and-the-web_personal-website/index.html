@@ -7,16 +7,18 @@
     <title>Charlotte Keuer</title>
   </head>
   <body>
-    <header>
-      <h1>Charlotte Keuer</h1>
+    <header class="header">
+      <h1>Charlotte Keuer <span class="boo">👻</span></h1>
       <nav>
         <a href="#portfolio">Portfolio</a>
         <a href="#contact">Contact</a>
         <a href="#bio">Biography</a>
       </nav>
     </header>
-    <main>
-      <section id="personal-info">
+    <main class="main-content">
+      <section id="personal-info"
+      class="main-section">
+        <h2>Personal Info</h2>
         <figure>
           <img
             src="https://thumbs.dreamstime.com/z/woman-hacker-wearing-hood-front-computer-screen-126116743.jpg"
@@ -25,25 +27,40 @@
           />
         </figure>
       </section>
-      <section id="portfolio"></section>
-      <h2>This is some Work I did</h2>
-      <ul>
-        <li>This looks cool</li>
+      <section id="portfolio" class="main-section">
+        <h2>Check out my work</h2>
+        <ul role="list">
+        <li><a href="https://www.nashvillezoo.org/">Nashville Zoo</a></li>
         <li>Very cool website</li>
         <li>Check out these graphics</li>
         <li>Wowsers</li>
       </ul>
+      
+    </section>
 
-      <section id="#contact">
+
+      <section id="contact"
+      class="main-section">
+        <h2>Get in contact</h2>
         <p>📞 030 4567889 📨 female@codecollective.com</p>
+        <input type="path-to-me">
       </section>
-      <section id="bio">
-        <p>
+      <section id="bio"
+      class="main-section">
+        <h2>Biography</h2>
+        <article>
+        <p class="text">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
           tempore aut mollitia harum. Perferendis dolore reprehenderit quisquam
           fugit, non maxime libero nulla possimus quas illum! Autem maiores
-          tenetur sapiente blanditiis.
+          tenetur sapiente blanditiis.</article>
+          <div>
+            <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perspiciatis exercitationem alias veritatis et blanditiis dignissimos. Ducimus quaerat et deserunt quibusdam esse aut iste commodi at doloremque, voluptate autem eos?</p>
+          </article>
+          </div>
         </p>
+        <button class="button">Go Back</button>
       </section>
     </main>
     <footer>&copy; Charlotte Keuer 2023</footer>
