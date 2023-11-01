@@ -1,14 +1,3 @@
-/*
-Use grid to fulfill the following tasks:
-
-[ ] - .element__1 should start at column three and go until column five
-[ ] - .element__2 should start at column five and go until the end
-[ ] - .element__5 should span two columns and two rows
-[ ] - .element__8 should span two rows
-[ ] - .element__spiced should be in row one and span the entire grid width
-[ ] - .element__20 should start at row six and span two rows
-
-*/
 :root {
   --primary-dark: #2e016d;
   --primary: #3f0097;
@@ -66,26 +55,40 @@ body {
   color: var(--white);
 }
 
+/*
+Use grid to fulfill the following tasks:
+
+[ ] - .element__1 should start at column three and go until column five
+[ ] - .element__2 should start at column five and go until the end
+[ ] - .element__5 should span two columns and two rows
+[ ] - .element__8 should span two rows
+[ ] - .element__spiced should be in row one and span the entire grid width
+[ ] - .element__20 should start at row six and span two rows
+
+*/
 .element-1 {
-  /* Add styles here */
+  grid-column: 3 / 5;
 }
 
 .element-2 {
-  /* Add styles here */
+  grid-column: 5 / -1;
 }
 
 .element-5 {
-  /* Add styles here */
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .element-8 {
-  /* Add styles here */
+  grid-row: span 2;
 }
 
 .element-spiced {
-  /* Add styles here */
+  grid-row-start: 1;
+  grid-column: 1 / -1;
 }
 
 .element-20 {
-  /* Add styles here */
+  grid-row-start: 6;
+  grid-row-end: 8;
 }
