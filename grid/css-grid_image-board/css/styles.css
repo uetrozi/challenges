@@ -20,6 +20,10 @@ body {
   grid-template-rows: 300px 200px 300px;
   gap: 1rem;
   padding: 1rem;
+  grid-template-areas:
+    "a b c"
+    "d b f"
+    "d e f";
   /* Add styles here */
 }
 
@@ -32,25 +36,25 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  grid-area: a;
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  grid-area: b;
 }
 
 .image-board__image--3 {
-  /* Add styles here */
+  grid-area: c;
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  grid-area: d;
 }
 
 .image-board__image--5 {
-  /* Add styles here */
+  grid-area: e;
 }
 
 .image-board__image--6 {
-  /* Add styles here */
+  grid-area: f;
 }
