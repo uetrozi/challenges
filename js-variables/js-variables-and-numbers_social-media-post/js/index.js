@@ -10,6 +10,13 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+
+const title = "Look at this!";
+const text = "lorem ipsum dolores bla bla bla";
+let numberOfLikes = 78;
+const createdByUsername = "Chimamanda Ngozi Adichie";
+const isReported = true;
+
 const socialMediaPost = [
   title,
   text,
@@ -17,11 +24,6 @@ const socialMediaPost = [
   createdByUsername,
   isReported,
 ];
-const title = "Look at this!";
-const text = "lorem ipsum dolores bla bla bla";
-let numberOfLikes = 78;
-const createdByUsername = "Chimamanda Ngozi Adichie";
-const isReported = true;
 
 // --^-- write your code here --^--
 
@@ -31,6 +33,5 @@ const isReported = true;
 
 // --v-- write your code here --v--
 console.log("socialMediaPost", socialMediaPost);
-console.log("numberOfLikes", numberOfLikes++);
-n
+console.log("numberOfLikes", numberOfLikes + 1);
 // --^-- write your code here --^--
