@@ -8,6 +8,14 @@ button.addEventListener("click", () => {
   const age = Number(input.value);
 
   // Exercise:
+  if (age < 13) {
+    console.log("You are not a teen");
+  } else if (age >= 13) {
+    console.log("You are a teen");
+  } else if (age > 19) {
+    console.log("You are not a teen");
+  }
+
   // Use conditions and the logical AND operator to write
   // "You are a teen." or "You are not a teen." into the output.
 });
