@@ -7,6 +7,7 @@ const pizza2 = document.querySelector('[data-js="pizza-2"]');
 const outputSection = document.querySelector('[data-js="output-section"]');
 
 const output = document.querySelector('[data-js="output"]');
+
 let pizzaSize1 = pizzaInput1.value;
 let pizzaSize2 = pizzaInput2.value;
 calculatePizzaGain(pizzaSize1, pizzaSize2);
