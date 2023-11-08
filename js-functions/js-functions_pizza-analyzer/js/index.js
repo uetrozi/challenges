@@ -11,6 +11,9 @@ const output = document.querySelector('[data-js="output"]');
 let pizzaSize1 = pizzaInput1.value;
 let pizzaSize2 = pizzaInput2.value;
 calculatePizzaGain(pizzaSize1, pizzaSize2);
+updatePizzaDisplay(pizza1, pizzaSize1);
+updatePizzaDisplay(pizza2, pizzaSize2);
+updateOutputColor(pizzaSize1, pizzaSize2);
 
 pizzaInput1.addEventListener("input", () => {
   pizzaSize1 = pizzaInput1.value;
@@ -50,5 +53,7 @@ function updatePizzaDisplay(pizzaElement, newSize) {
 function updateOutputColor(size1, size2) {
   if (size1 > size2) {
     outputSection.style.backgroundColor = "var(--red)";
+  } else {
+    outputSection.style.backgroundColor = "var(--green)";
   }
 }
