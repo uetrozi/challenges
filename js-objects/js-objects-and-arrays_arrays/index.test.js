@@ -51,3 +51,4 @@ test("Exercise 9: Array shiftedFruits contains no element with name apple and th
   expect(shiftedFruits).not.toEqual(expect.arrayContaining(["apple"]));
   expect(shiftedFruits).toHaveLength(2);
 });
+
