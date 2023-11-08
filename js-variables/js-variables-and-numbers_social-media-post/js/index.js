@@ -11,6 +11,20 @@ console.clear();
 
 // --v-- write your code here --v--
 
+const title = "Look at this!";
+const text = "lorem ipsum dolores bla bla bla";
+let numberOfLikes = 78;
+const createdByUsername = "Chimamanda Ngozi Adichie";
+const isReported = true;
+
+const socialMediaPost = [
+  title,
+  text,
+  numberOfLikes,
+  createdByUsername,
+  isReported,
+];
+
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +32,6 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log("socialMediaPost", socialMediaPost);
+console.log("numberOfLikes", numberOfLikes + 1);
 // --^-- write your code here --^--
