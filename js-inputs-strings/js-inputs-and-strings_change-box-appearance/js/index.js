@@ -16,3 +16,19 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const inputColor = document.querySelector('[data-js="input-color"]');
+const inputRadius = document.querySelector('[data-js="input-radius"]');
+const inputRotation = document.querySelector('[data-js="input-rotation"]');
+
+inputColor.addEventListener("click", () => {
+  console.log(inputColor.value);
+});
+
+inputRadius.addEventListener("click", () => {
+    console.log(inputRadius.value);
+  });
+
+inputRotation.addEventListener("click", () => {
+  console.log(inputRotation.value);
+});
