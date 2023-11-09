@@ -21,14 +21,16 @@ const inputColor = document.querySelector('[data-js="input-color"]');
 const inputRadius = document.querySelector('[data-js="input-radius"]');
 const inputRotation = document.querySelector('[data-js="input-rotation"]');
 
-inputColor.addEventListener("click", () => {
-  console.log(inputColor.value);
+const box = document.querySelector('[data-js="box"]');
+
+inputColor.addEventListener("input", () => {
+  box.style.background = "hsl(" + inputColor.value + ", 70%, 60%)";
 });
 
-inputRadius.addEventListener("click", () => {
-    console.log(inputRadius.value);
-  });
+inputRadius.addEventListener("input", () => {
+  box.style["border-radius"] = inputRadius.value + "%";
+});
 
-inputRotation.addEventListener("click", () => {
-  console.log(inputRotation.value);
+inputRotation.addEventListener("input", () => {
+  box.style.transform = "rotate(" + inputRotation.value + "deg)";
 });
