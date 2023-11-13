@@ -20,12 +20,16 @@ body {
   border-radius: 14px;
   border: none;
   font-size: 1.5rem;
+
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .start-button:hover {
-  background-color: #f5521c;
+  background-color: #e5430f;
   color: white;
+  font-size: 2rem;
+  transition: font-size 50ms ease-in-out 1ms,
+    background-color 50ms ease-in-out 1ms;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
