@@ -19,4 +19,10 @@ const programmingLanguages = [
 
 // --v-- write/change code here --v--
 
+for (const items of programmingLanguages) {
+  const newItems = document.createElement("li");
+  newItems.textContent = items;
+  ol.append(newItems);
+}
+
 // --^-- write/change code here --^--
