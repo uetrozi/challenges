@@ -32,17 +32,17 @@ const allCardsWith3Tags = cards.filter((CardContent) => {
 });
 
 const allCardsThatAreNotBookmarked = cards.filter((CardContent) => {
-  return !CardContent.isBookmarked 
+  return !CardContent.isBookmarked;
 });
-
-
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
   (CardContent) => {
-    return CardContent.tags.includes("js") || CardContent.tags.includes("html") &&
-        CardContent.isBookmarked == true
-      }); 
-
+    return (
+      CardContent.tags.includes("js") ||
+      (CardContent.tags.includes("html") && CardContent.isBookmarked == true)
+    );
+  }
+);
 
 console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
 
