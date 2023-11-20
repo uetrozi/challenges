@@ -16,5 +16,4 @@ export function countdown() {
   }
 
   rocket.countdown++;
-  console.log(rocket.countdown)
 }

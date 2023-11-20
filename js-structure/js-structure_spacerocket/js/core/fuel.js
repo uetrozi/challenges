@@ -8,5 +8,5 @@ export function fuel() {
   }
 
   rocket.fuel = true;
-  console.log("rocket fuel true")
+
 }

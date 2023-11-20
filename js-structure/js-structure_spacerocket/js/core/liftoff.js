@@ -12,5 +12,4 @@ export function liftoff() {
   }
 
   rocket.liftoff = true;
-  console.log("rocket.liftoff = true;")
 }
