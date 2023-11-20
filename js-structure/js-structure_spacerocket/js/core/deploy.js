@@ -13,4 +13,5 @@ export function deployPayload() {
   }
 
   rocket.payloadDeployed = true;
+  console.log("rocket.payloadDeployed = true;");
 }

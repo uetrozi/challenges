@@ -13,4 +13,5 @@ export function loadPayload(satellite) {
   }
 
   rocket.payload.push(satellite);
+  console.log(rocket.payload);
 }
