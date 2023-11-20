@@ -9,10 +9,12 @@ queryInput.addEventListener("input", (event) => {
 
   const searchString = event.target.value;
 
-  const foundCountry = null;
+  const foundCountries = countries.filter((countryItem) => {
+    return countryItem.name.startsWith(searchString);
+  });
 
-  if (foundCountry) {
+  foundCountries.forEach((foundCountry) => {
     const countryElement = Country(foundCountry);
     container.append(countryElement);
-  }
+  });
 });
