@@ -25,7 +25,7 @@ startRaceButton.addEventListener("click", (event) => {
 
   // --v-- write your code here --v--
 
-  animateRunner(runner1).then((value) => {
+  animateRunner(runner1).then(() => {
     animateRunner(runner2).then(() => {
       animateRunner(runner3);
     });
