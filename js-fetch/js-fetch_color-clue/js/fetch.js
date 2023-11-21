@@ -19,5 +19,19 @@ export async function fetchNewColor() {
 
   // --v-- your code here --v--
 
-  // --^-- your code here --^--
+  try {
+    const response = await fetch(colorApiUrl);
+
+    if (response.ok) {
+      const randomColor = await response.json();
+      const randomColorName = randomColor.name.value;
+      const hexClosestToRandomColor = randomColor.name.closest_named_hex;
+      setColorToGuess(hexClosestToRandomColor, randomColorName);
+    } else {
+      console.error("Bad Response");
+    }
+  } catch (error) {
+    console.error("An Error occurred");
+  }
 }
+// --^-- your code here --^--
