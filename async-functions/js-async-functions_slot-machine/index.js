@@ -24,6 +24,7 @@ root.append(machine, spinButton, result);
 spinButton.addEventListener("click", async () => {
   spinButton.disabled = true;
   result.setSpinning();
+  
   try {
     const symbols = await Promise.all([
       wheel1.spin(),
@@ -45,6 +46,7 @@ spinButton.addEventListener("click", async () => {
   } catch (error) {
     result.setMachineChoked();
   }
+
   spinButton.disabled = false;
 });
 
