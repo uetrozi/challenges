@@ -7,6 +7,12 @@ let count = 0;
 
 // --v-- write/change code here --v--
 
+while (number <= 0.9) {
+  number = Math.random();
+  count = count + 1;
+  console.log(number);
+}
+
 // --^-- write/change code here --^--
 
 console.log(
