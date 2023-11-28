@@ -5,11 +5,15 @@ import MainSection from "./components/mainSection/mainSection.jsx";
 
 function App() {
   return (
-    <>
-      <Header />
-      <MainSection/>
-      <Footer />
-    </>
+    <div className="wrapper">
+      <div className="smartphone-screen">
+        <div className="screen-content">
+          <Header />
+          <MainSection />
+          <Footer />
+        </div>
+      </div>
+    </div>
   );
 }
 
