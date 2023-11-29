@@ -10,3 +10,8 @@ export default function Entry({ title, date, text, isFavorited }) {
     </li>
   );
 }
+
+
+// const [Favorited, setFavorited] = useState(false)
+
+// onclick={() => setFavorited(!Favorited)}
