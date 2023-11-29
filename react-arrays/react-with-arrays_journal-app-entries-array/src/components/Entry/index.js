@@ -1,6 +1,8 @@
 import FavoriteButton from "../FavoriteButton";
 import "./Entry.css";
 
+
+
 export default function Entry({ motto, notes, date }) {
   return (
     <article className="entry">
