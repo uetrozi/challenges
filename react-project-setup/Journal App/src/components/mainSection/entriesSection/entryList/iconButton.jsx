@@ -4,7 +4,11 @@ import starFilled from "../../../../assets/star-filled.svg";
 export default function IconButton({ isFavorited }) {
   return isFavorited ? (
     <button type="button" className="icon-button">
-      <img className="starButton-image" src={starFilled} alt="star-filled"></img>
+      <img
+        className="starButton-image"
+        src={starFilled}
+        alt="star-filled"
+      ></img>
     </button>
   ) : (
     <button type="button" className="icon-button">

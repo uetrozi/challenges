@@ -169,7 +169,7 @@ textarea {
 
 .icon-button {
   align-self: flex-end;
-  visibility: hidden;
+  visibility: visible;
 }
 
 .starButton-image {
