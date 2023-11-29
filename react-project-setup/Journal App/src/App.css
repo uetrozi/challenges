@@ -97,7 +97,6 @@ textarea {
   background-color: transparent;
   border: 5px;
   border-color: var(--col-primary-invert);
-
 }
 
 .tab-bar {
@@ -165,7 +164,4 @@ textarea {
   grid-auto-flow: row dense;
   gap: 1em;
   grid-template: repeat(4, 1fr) / repeat(2, 1fr);
-}
-.entry-title {
-  font-size: 2rem;
 }
