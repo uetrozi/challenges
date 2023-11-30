@@ -1,18 +1,12 @@
-import { useState } from "react";
 
-export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+export default function Form({onSubmit}) {
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
 
   return (
     <form
       className="form"
       aria-labelledby="user-details"
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
     >
       <h2 id="user-details">Please enter your details here!</h2>
       <label htmlFor="name">Name: </label>
