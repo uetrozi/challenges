@@ -9,6 +9,7 @@ import { uid } from "uid";
 const initialEntries = [
   {
     id: 1000,
+    isFavorite: false,
     date: "Feb 5, 2025",
     motto: "We are in a state of chaos",
     notes:
@@ -16,6 +17,7 @@ const initialEntries = [
   },
   {
     id: 999,
+    isFavorite: false,
     date: "Feb 4, 2025",
     motto: "Props, Props, Props",
     notes:
@@ -23,6 +25,7 @@ const initialEntries = [
   },
   {
     id: 998,
+    isFavorite: false,
     date: "Feb 3, 2025",
     motto: "How to nest components online fast",
     notes:
@@ -30,6 +33,7 @@ const initialEntries = [
   },
   {
     id: 997,
+    isFavorite: false,
     date: "Feb 2, 2025",
     motto: "I'm a React Developer",
     notes: "My React-ion when I learned about React: Yay!",
@@ -41,7 +45,19 @@ function App() {
   const date = new Date().toLocaleDateString("en-us", { dateStyle: "medium" });
 
   function handleAddEntry(newEntry) {
-    setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
+    setEntries([
+      { id: uid(), isFavorite: false, date, ...newEntry },
+      ...entries,
+    ]);
+  }
+
+  function handleToggleFavorite(id) {
+    setEntries(
+      entries.map((entry) => {
+        if (entry.id === id) return { ...entry, isFavorite: !entry.isFavorite };
+        return entry;
+      })
+    );
   }
 
   return (
@@ -49,7 +65,10 @@ function App() {
       <Header />
       <main className="app__main">
         <EntryForm onAddEntry={handleAddEntry} />
-        <EntriesSection entries={entries} />
+        <EntriesSection
+          onToggleFavorite={handleToggleFavorite}
+          entries={entries}
+        />
       </main>
       <Footer />
     </div>

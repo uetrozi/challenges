@@ -9,7 +9,7 @@ import { Fragment } from "react";
 
 
 
-export default function EntriesSection({entries}) {
+export default function EntriesSection({entries, onToggleFavorite, isFavorite, id}) {
 
   return (
     <section className="entries-section">
@@ -25,7 +25,7 @@ export default function EntriesSection({entries}) {
         {entries.map((entry, index) => (
           <Fragment key={entry.id}>
             {index > 0 ? <Divider /> : null}
-            <Entry date={entry.date} motto={entry.motto} notes={entry.notes} />
+            <Entry isFavorite={entry.isFavorite} id={entry.id} onToggleFavorite={onToggleFavorite} date={entry.date} motto={entry.motto} notes={entry.notes} />
           </Fragment>
         ))}
       </div>
