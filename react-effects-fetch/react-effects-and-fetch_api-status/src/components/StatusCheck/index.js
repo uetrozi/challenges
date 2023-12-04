@@ -7,19 +7,7 @@ export default function StatusCheck() {
   const [statusIcon, setStatusIcon] = useState("⁉️");
 
   function handleCheckApiStatus() {
-    /**
-     * Hint 1:
-     * Use the `fetch()` function and pass the `apiStatusUrl` into it
-     *
-     * Hint 2:
-     * The fetch function returns a promise which resolves to a Response
-     * object once it is ready.
-     *
-     * Hint 3:
-     * The Response object has a `ok` property which is true if the response
-     * is okay and false if it is not.
-     **/
-    // --v-- write your code here --v--
+
     async function fetchApiStatus() {
       try {
         setStatusIcon("⏳");
