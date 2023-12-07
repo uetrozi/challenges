@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export default function Overview() {
   const router = useRouter();
-  const { slug } = router.query;
+ 
 
   function handleRandomVolume() {
     const randomVolume = volumes[Math.floor(Math.random() * volumes.length)];

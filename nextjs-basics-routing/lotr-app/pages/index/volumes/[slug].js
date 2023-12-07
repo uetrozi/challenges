@@ -1,41 +1,57 @@
 import { volumes } from "../../data";
 import Link from "next/link";
 import Image from "next/image";
-
-
-//so far this is not working and does nothing, i hope/guess that will change with the next sessions??
-//links to prev and next volumes need a function when to nor render
+import { useRouter } from "next/router";
 
 export default function Detail() {
-  
+  const router = useRouter();
+  const { slug } = router.query;
+
+  const currentIndex = volumes.findIndex((volume) => volume.slug === slug);
+
+  const currentVolume = volumes[currentIndex];
+  const nextVolume = volumes[currentIndex + 1];
+  const previousVolume = volumes[currentIndex - 1];
+
+  if (!currentVolume) {
+    return null;
+  }
+
+  const { title, description, cover, books } = currentVolume;
 
   return (
-    <div>
+    <>
       <Link href="../volumes">All Volumes</Link>
-      <h1>{slug.title}</h1>
-      <p>{slug.description}</p>
+      <h1>{title}</h1>
+      <p>{description}</p>
       <ul>
         {" "}
-        {slug.books.map((book) => (
+        {books.map((book) => (
           <li key={book.ordinal}>
             {book.ordinal}: {book.title}
           </li>
         ))}
       </ul>
       <Image
-        src={slug.cover}
+        src={cover}
         height={230}
         width={140}
-        alt={"Book Cover of " + slug.title}
+        alt={"Book Cover of " + title}
       />
+      {previousVolume ? (
       <div>
         <button>
-          <Link href={`/index/volumes/${slug}`}>Previous Volume</Link>
+          <Link href={`/index/volumes/${previousVolume.slug}`}>Previous Volume: {previousVolume.title}</Link>
         </button>
+        </div>
+        ): null}
+        {nextVolume ? (
+        <div>
         <button>
-          <Link href={`/index/volumes/${slug}`}>Next Volume</Link>
+          <Link href={`/index/volumes/${nextVolume.slug}`}>Next Volume: {nextVolume.title}</Link>
         </button>
       </div>
-    </div>
+      ) : null}
+    </>
   );
 }
