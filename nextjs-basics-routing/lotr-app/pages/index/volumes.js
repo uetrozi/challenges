@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 
 export default function Overview() {
   const router = useRouter();
- 
 
   function handleRandomVolume() {
     const randomVolume = volumes[Math.floor(Math.random() * volumes.length)];
@@ -18,7 +17,7 @@ export default function Overview() {
       <h2>All Volumes</h2>
       <ul>
         {volumes.map((volume) => (
-          <li key={volume.id}>
+          <li key={volume.slug}>
             <Link href={"/index/volumes/" + volume.slug}>{volume.title}</Link>
           </li>
         ))}
