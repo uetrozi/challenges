@@ -1,5 +1,6 @@
 export const volumes = [
   {
+    id: 1,
     slug: "the-fellowship-of-the-ring",
     title: "The Fellowship of the Ring",
     description:
@@ -18,6 +19,7 @@ export const volumes = [
     color: "#242C31",
   },
   {
+    id: 2,
     slug: "the-two-towers",
     title: "The Two Towers",
     description:
@@ -36,6 +38,7 @@ export const volumes = [
     color: "#532724",
   },
   {
+    id: 3,
     slug: "the-return-of-the-king",
     title: "The Return of the King",
     description:

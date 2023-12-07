@@ -1,7 +1,6 @@
-import { volumes } from "../../../resourceslotr/lib/data";
+import { volumes } from "../../data";
 import Link from "next/link";
 import Image from "next/image";
-import cover from "resourceslotr/images/the-return-of-the-king.png";
 
 const book = volumes.find(({ slug }) => slug === "the-return-of-the-king");
 
@@ -20,7 +19,7 @@ export default function Detail() {
         ))}
       </ul>
       <Image
-        src={cover}
+        src={book.cover}
         height={230}
         width={140}
         alt={"Book Cover of " + book.title}
