@@ -14,7 +14,7 @@ export default function Input({
 }) {
   return (
     <>
-      <label htmlFor={name}>{labelText}</label>
+      <label htmlFor={name} data-testid="testlabel">{labelText}</label>
       <StyledInput
         id={name}
         name={name}
