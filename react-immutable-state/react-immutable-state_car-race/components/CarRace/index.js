@@ -48,7 +48,7 @@ export default function CarRace() {
                 <CarButton
                   onClick={() => moveCar(car)}
                   $positionX={car.position.x}
-                  $lastDistance={car.position.lastDistance}
+                  $lastDistance={car.position.lastDistan..ce}
                   aria-label={`Move clicked car forward`}
                 >
                   {car.emoji}
