@@ -2,6 +2,12 @@ import { volumes } from "../../data";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  background-color: ${({ $color}) => ($color ? $color : null)};
+`;
+
 
 export default function Detail() {
   const router = useRouter();
@@ -17,10 +23,10 @@ export default function Detail() {
     return null;
   }
 
-  const { title, description, cover, books } = currentVolume;
+  const { title, description, cover, books, color } = currentVolume;
 
   return (
-    <>
+    <StyledDiv $color={color}>
       <Link href="../volumes">All Volumes</Link>
       <h1>{title}</h1>
       <p>{description}</p>
@@ -39,19 +45,24 @@ export default function Detail() {
         alt={"Book Cover of " + title}
       />
       {previousVolume ? (
-      <div>
-        <button>
-          <Link href={`/index/volumes/${previousVolume.slug}`}>Previous Volume: {previousVolume.title}</Link>
-        </button>
-        </div>
-        ): null}
-        {nextVolume ? (
         <div>
-        <button>
-          <Link href={`/index/volumes/${nextVolume.slug}`}>Next Volume: {nextVolume.title}</Link>
-        </button>
-      </div>
+          <button>
+            <Link href={`/index/volumes/${previousVolume.slug}`}>
+              Previous Volume: {previousVolume.title}
+            </Link>
+          </button>
+        </div>
       ) : null}
-    </>
+      {nextVolume ? (
+        <div>
+          <button>
+            <Link href={`/index/volumes/${nextVolume.slug}`}>
+              Next Volume: {nextVolume.title}
+            </Link>
+          </button>
+        </div>
+      ) : null}
+    </StyledDiv>
   );
 }
+
