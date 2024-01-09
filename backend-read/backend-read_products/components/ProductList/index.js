@@ -3,7 +3,6 @@ import { StyledHeading, StyledList } from "./ProductList.styled";
 import { StyledLink } from "../Link/Link.styled";
 
 export default function ProductList() {
-  
   const { data, isLoading } = useSWR("/api/products");
 
   if (isLoading) {
@@ -13,8 +12,6 @@ export default function ProductList() {
   if (!data) {
     return;
   }
-
-  console.log(data);
 
   return (
     <>
