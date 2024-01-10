@@ -13,11 +13,12 @@ export default async function handler(request, response) {
   if (request.method === "POST") {
     try {
       const productData = request.body;
-      await Product.create(productData);
-      response.status(201).json({ status: "Product created" });
+      const product = new Product(productData);
+      await product.save();
+      return response.status(201).json({ status: "Product created." });
     } catch (e) {
       console.error(e);
-      response.status(400).json({ error: e.messega });
+      return response.status(400).json({ error: e.messega });
     }
   }
 }

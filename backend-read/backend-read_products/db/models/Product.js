@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Review from "./Review";
+import "./Review";
 
 const { Schema } = mongoose;
 
@@ -15,5 +15,3 @@ const Product =
   mongoose.models.Product || mongoose.model("Product", productSchema);
 
 export default Product;
-
-
